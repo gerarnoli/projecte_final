@@ -13,25 +13,37 @@ function App() {
   }, []);
  
   const getUrlWithfetch = async () => {
-    const response = await axios.get(url);    
-    console.log(response.data);
-    setUserData(response.data.dates["2021-05-05"].countries.Spain.regions);    
-    //console.log(response.data.dates["2021-05-05"].countries.Spain.regions);
-    console.log(response.data.dates["2021-05-05"].countries.Spain.regions);
+    //const response = await axios.get(url);    
+
+    axios.get(url)
+      .then(function (response) {
+        // handle success
+        console.log(response.data);
+        setUserData(response.data.dates["2021-05-05"].countries.Spain.regions);    
+        //console.log(response.data.dates["2021-05-05"].countries.Spain.regions);
+        console.log(response.data.dates["2021-05-05"].countries.Spain.regions);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+    
   };
  
   const listaComunidades = userData.map((c) => <div key={c.id}>{c.id}</div>);
+
   return (
     <div className="App">
           <header className="App-header">
-            <h2>Datos Kovid  {userData.updated_at}</h2>
+            <h2>Datos Kovid  {userData[5].id}</h2>
           </header>
  
           <body className="App-body">
           <h4> pepe {userData[5].id}</h4>
-        <div>
           {listaComunidades}
-        </div>
          
           </body>
  
