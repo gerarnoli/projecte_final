@@ -1,56 +1,20 @@
-import React, {useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import './App.css';
- 
-const url = "https://api.covid19tracking.narrativa.com/api/2021-05-05/country/spain";
+import Navbar from "./component/Navbar";
+import { BrowserRouter as Router } from 'react-router-dom';
+// import Home from './pages';
+// import About from './pages/about';
+// import Services from './pages/servicios';
+// import Contact from './pages/Contact';
+// import SignUp from './pages/signup';
  
 function App() {
- 
-  const [userData, setUserData] = useState({});
- 
-  useEffect( () => {
-    getUrlWithfetch();
-  }, []);
- 
-  const getUrlWithfetch = async () => {
-    //const response = await axios.get(url);    
-
-    axios.get(url)
-      .then(function (response) {
-        // handle success
-        console.log(response.data);
-        setUserData(response.data.dates["2021-05-05"].countries.Spain.regions);    
-        //console.log(response.data.dates["2021-05-05"].countries.Spain.regions);
-        console.log(response.data.dates["2021-05-05"].countries.Spain.regions);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .then(function () {
-        // always executed
-      });
-    
-  };
- 
-  const listaComunidades = userData.map((c) => <div key={c.id}>{c.id}</div>);
-
   return (
-    <div className="App">
-          <header className="App-header">
-            <h2>Datos Kovid  {userData[5].id}</h2>
-          </header>
- 
-          <body className="App-body">
-          <h4> pepe {userData[5].id}</h4>
-          {listaComunidades}
-         
-          </body>
- 
-     </div>     
+    <Router>
+        <Navbar />
+    </Router>
+    
   );
- 
- 
 }
  
  
