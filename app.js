@@ -13,10 +13,14 @@ function App() {
   }, []);
  
   const getUrlWithfetch = async () => {
-    axios.get(url).then(function (response) {
+    //const response = await axios.get(url);    
+
+    axios.get(url)
+      .then(function (response) {
         // handle success
         console.log(response.data);
         setUserData(response.data.dates["2021-05-05"].countries.Spain.regions);    
+        //console.log(response.data.dates["2021-05-05"].countries.Spain.regions);
         console.log(response.data.dates["2021-05-05"].countries.Spain.regions);
       })
       .catch(function (error) {
@@ -29,7 +33,7 @@ function App() {
     
   };
  
-  //const listaComunidades = userData.map((c) => <div key={c.id}>{c.id}</div>);
+  const listaComunidades = userData.map((c) => <div key={c.id}>{c.id}</div>);
 
   return (
     <div className="App">
@@ -39,12 +43,13 @@ function App() {
  
           <body className="App-body">
           <h4> pepe {userData[5].id}</h4>
-          {/*listaComunidades*/}
+          {listaComunidades}
          
           </body>
  
      </div>     
   );
+
 }
  
 export default App;
