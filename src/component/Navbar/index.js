@@ -3,7 +3,9 @@ import {
     Nav,
     NavLink,
     Bars,
-    NavMenu
+    NavMenu,
+    NavBtn,
+    NavBtnLink
   } from './NavbarElements';
 
 const Navbar = () => {
@@ -11,7 +13,7 @@ const Navbar = () => {
         <>
         <Nav>
             <NavLink to="/">
-                <h1>LOGO</h1>
+                <img src={require('../../images/logo.png')} alt="logo" />
             </NavLink>
             <Bars />
             <NavMenu>
@@ -24,8 +26,10 @@ const Navbar = () => {
                 <NavLink to="/contact" activeStyle>
                     Contact
                 </NavLink>
-                
             </NavMenu>
+            <NavBtn>
+                <NavBtnLink to='/signin'>Sign in</NavBtnLink>
+            </NavBtn>
 
         </Nav>  
         </>
