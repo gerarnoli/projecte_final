@@ -3,10 +3,8 @@ import {
     Nav,
     NavLink,
     Bars,
-    NavMenu,
-    NavBtn,
-    NavBtnLink
-  } from './NavbarElements';
+    NavMenu
+  } from './Header-css';
 
 const Navbar = () => {
     return (
@@ -23,20 +21,13 @@ const Navbar = () => {
                 <NavLink to="/servicios" activeStyle>
                     Servicios
                 </NavLink>
-                <NavLink to="/contact" activeStyle>
-                    Contact
+                <NavLink to="/contacto" activeStyle>
+                    Contacto
                 </NavLink>
             </NavMenu>
-            <NavBtn>
-                <NavBtnLink to='/signin'>Sign in</NavBtnLink>
-            </NavBtn>
-
         </Nav>  
         </>
     );
 }
-
-// Confirmacion de que Kevin no Existe
-// Kevin vete ya, kevin vete ya, keevin vete yaa!
 
 export default Navbar
