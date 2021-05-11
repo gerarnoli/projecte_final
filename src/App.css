@@ -1,9 +1,14 @@
-.App {
-  text-align: center;
-  margin: 50px;
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+* {
+  font-family: 'Sora', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
+
+/* .App-header {
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
@@ -29,4 +34,4 @@
   align-self: center;
   background-color: #63b7af;
   border-radius: 2em;
-}
+} */
