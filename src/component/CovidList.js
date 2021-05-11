@@ -1,35 +1,11 @@
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import React from 'react';
+import * as ReactBootstrap from 'react-bootstrap';
 
-const url = "https://api.covid19tracking.narrativa.com/api/2021-05-05/country/spain";
+const BootTable = () => {
 
-export default class CovidList extends React.Component {
-    state = {
-        llista: []
-    }
+    const [posts, setPosts] = useState({blogs: []})
 
-<<<<<<< HEAD
-    componentDidMount() {
-        axios.get(url).then(res => {
-            console.log(res);
-            console.log(res.data.dates["2021-05-05"].countries.Spain.regions[5]);
-            this.setState({llista: res.data.dates["2021-05-05"].countries.Spain.regions});
-        })
-    }
-
-    render() {
-        return (
-            <React.Fragment>
-                <h1>Nous casos avui</h1>
-                <ul>
-                    {this.state.llista.map(item => <li>{item.id}<span>: </span>{item.today_new_open_cases}</li>)}
-                    {/*this.state.llista.id*/}
-                </ul>
-            </React.Fragment>
-        )
-    }
-}
-=======
     useEffect(() => {
         const fetchPostList = async () => {
             let today = new Date();
@@ -73,4 +49,3 @@ export default class CovidList extends React.Component {
 }
 
 export default BootTable
->>>>>>> Gerry
