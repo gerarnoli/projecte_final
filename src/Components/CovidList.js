@@ -16,7 +16,6 @@ const BootTable = () => {
         fetchPostList()
     }, [setPosts])
 
-
     return (
         <div>
             <ReactBootstrap.Table striped bordered hover>
