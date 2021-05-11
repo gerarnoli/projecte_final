@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './App.css';
-import CovidList from "./omponent/CovidList";
+import CovidList from "./component/CovidList";
 
 import Navbar from "./component/Navbar";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
