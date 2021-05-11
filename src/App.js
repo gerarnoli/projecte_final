@@ -12,7 +12,7 @@ import Contacto from './paginas/contacto';
 
 // Import de la API COVID
 
-import CovidList from "./component/CovidList";
+//import CovidList from "./component/CovidList";
 
 // class App extends Component {
 //   render(){
