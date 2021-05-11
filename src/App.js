@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import './App.css';
 
 // HEADER
@@ -10,22 +10,20 @@ import About from './paginas/about';
 import Servicios from './paginas/servicios';
 import Contacto from './paginas/contacto';
 
+// FOOTER
+
+import Footer from "./component/Footer";
+
 // Import de la API COVID
 
-import CovidList from "./component/CovidList";
+// import CovidList from "./component/CovidList";
 
-// class App extends Component {
-//   render(){
-//     return(
-//       <div className="App">
-//         <CovidList />
-//       </div>
-//     )
-//   }
-// }
  
 function App() {
   return (
+    <div className="page-container">
+      <div className="content-wrap">
+    
     <Router>
         <Navbar />
         <switch>
@@ -35,6 +33,9 @@ function App() {
           <Route path='/contacto' component={Contacto} />
         </switch>
     </Router>
+    </div>
+    <Footer />
+    </div>
     
   );
 }
