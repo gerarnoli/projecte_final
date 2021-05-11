@@ -14,12 +14,12 @@ function App() {
     <Router>
         <CovidList/>
         {/*<Navbar/>*/}
-        <switch>
+        {/* <switch>
           <Route path='/' exact component={Home} />
           <Route path='/about' component={About} />
           <Route path='/Servicios' component={Servicios} />
           <Route path='/contacto' component={Contacto} />
-        </switch>
+        </switch> */}
     </Router>
     
   );
