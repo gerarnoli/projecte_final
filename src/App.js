@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
         <CovidList/>
-        <Navbar />
+        {/*<Navbar/>*/}
         <switch>
           <Route path='/' exact component={Home} />
           <Route path='/about' component={About} />
