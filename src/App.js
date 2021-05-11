@@ -3,7 +3,7 @@ import './App.css';
 
 // HEADER
 
-import Navbar from "./component/Navbar";
+import Navbar from "./component/Navbar/Header";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './paginas';
 import About from './paginas/about';
