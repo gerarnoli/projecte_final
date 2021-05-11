@@ -27,6 +27,7 @@ import CovidList from "./component/CovidList";
 function App() {
   return (
     <Router>
+        {/* <CovidList/> */}
         <Navbar />
         <switch>
           <Route path='/' exact component={Home} />
