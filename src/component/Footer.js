@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Footer.css";
+import Logo from './Logo';
 
 function Footer() {
     return (
@@ -8,7 +9,7 @@ function Footer() {
                 <div className="row">
                     {/* Column1 */}
                     <div className="col">
-                    <img src={require('../images/logo.png')} alt="logo" />
+                    <Logo />
                         
                     </div>
 
@@ -20,15 +21,16 @@ function Footer() {
 
                     {/* Column3 */}
                     <div className="col">
-                        <h5>GRUP 3</h5>
-                        
+                        <h3>GRUP 3</h3>
+                        <h7>PEDRO NIETO <br/> GERARD ARNAN <br/>BAYRON LÓPEZ</h7>                        
                     </div>
                 </div>
                 <hr/>
-                <div className="row">
-                        <p className="col-sm">
-                            &copy;{new Date().getFullYear()} DADES COVID ORG | Terms of Service 
-                        </p>
+                <div className="row2">
+                    {/* Column2 */}
+                        <div className="col-sm">
+                            &copy;{new Date().getFullYear()} DADES COVID ORG | Terminos de Servicio 
+                        </div>
                 </div>
             </div>
         </div>
