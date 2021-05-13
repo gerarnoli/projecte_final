@@ -10,8 +10,8 @@ const BootTable = () => {
         const fetchPostList = async () => {
             let today = new Date();    
             today = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
-    
             console.log(today);
+
             const {data} = await axios(`https://api.covid19tracking.narrativa.com/api/${today}/country/spain`)
             
             setPosts({blogs: data.dates[today].countries.Spain.regions})
