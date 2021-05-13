@@ -1,6 +1,5 @@
 import React from "react";
 import './App.css';
-import CovidList from "./component/CovidList"; // Import de la API COVID
 
 import Navbar from "./component/Navbar/Header";
 import Footer from "./component/Footer"; // FOOTER
@@ -20,12 +19,12 @@ function App() {
     <Router>
         <Navbar />
         <switch>
-          <Route path='/' exact component={Home} />
+          
           <Route path='/about' component={About} />
           <Route path='/Servicios' component={Servicios} />
           <Route path='/contacto' component={Contacto} />
+          <Route path='/' exact component={Home}  />
         </switch>
-        <CovidList/>
     </Router>
     </div>
     <Footer />
