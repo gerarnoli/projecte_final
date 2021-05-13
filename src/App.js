@@ -28,7 +28,7 @@ function App() {
         <CovidList/>
     </Router>
     </div>
-    <Footer />
+    <Footer/>
     </div>
     
   );

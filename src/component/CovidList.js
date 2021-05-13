@@ -31,14 +31,16 @@ const BootTable = () => {
                     <tr>
                         <th>Comunitat autònoma</th>
                         <th>Nous casos avui</th>
+                        <th>Nous morts avui</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         posts.blogs && posts.blogs.map((item) => (
                             <tr key={item.id}>
-                                <td>{item.id}</td>
+                                <td>{item.name}</td>
                                 <td>{item.today_new_open_cases}</td>
+                                <td>{item.today_new_deaths}</td>
                             </tr>
                         ))
                     }
