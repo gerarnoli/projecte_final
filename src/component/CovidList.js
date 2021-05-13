@@ -8,12 +8,8 @@ const BootTable = () => {
 
     useEffect(() => {
         const fetchPostList = async () => {
-            let today = new Date();
-            let dd = String(today.getDate()).padStart(2, '0');
-            let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-            let yyyy = today.getFullYear();
-    
-            today = yyyy + '-' + mm + '-' + dd;
+            let today = new Date();    
+            today = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
     
             console.log(today);
             const {data} = await axios(`https://api.covid19tracking.narrativa.com/api/${today}/country/spain`)
@@ -31,14 +27,16 @@ const BootTable = () => {
                     <tr>
                         <th>Comunitat autònoma</th>
                         <th>Nous casos avui</th>
+                        <th>Nous morts avui</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         posts.blogs && posts.blogs.map((item) => (
                             <tr key={item.id}>
-                                <td>{item.id}</td>
+                                <td>{item.name}</td>
                                 <td>{item.today_new_open_cases}</td>
+                                <td>{item.today_new_deaths}</td>
                             </tr>
                         ))
                     }
