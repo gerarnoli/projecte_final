@@ -1,10 +1,9 @@
-import React from 'react'
-import CovidList from '../component/CovidList'
+import React from 'react';
 
 const Home = () => {
     return (
         <div className="principal">
-            <CovidList /> 
+             
         </div>
     )
 }
