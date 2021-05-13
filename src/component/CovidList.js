@@ -19,7 +19,7 @@ export default class CovidList extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <h1>Nous casos avui</h1>
+                <h2>Nous casos avui</h2>
                 <ul>
                     {this.state.llista.map(item => <li>{item.id}<span>: </span>{item.today_new_open_cases}</li>)}
                     {/*this.state.llista.id*/}
