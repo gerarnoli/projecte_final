@@ -1,7 +1,6 @@
 import React from "react";
 import './App.css';
-
-// HEADER
+import CovidList from "./component/CovidList";
 
 import Navbar from "./component/Navbar/Header";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -25,6 +24,7 @@ function App() {
       <div className="content-wrap">
     
     <Router>
+        <CovidList/>
         <Navbar />
         <switch>
           <Route path='/' exact component={Home} />
