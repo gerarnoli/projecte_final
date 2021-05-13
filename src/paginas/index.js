@@ -4,8 +4,7 @@ import CovidList from '../component/CovidList'
 const Home = () => {
     return (
         <div className="principal">
-            <CovidList />
-            
+            <CovidList /> 
         </div>
     )
 }
