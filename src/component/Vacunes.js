@@ -15,6 +15,14 @@ const Vacunes = () => {
     fetchPostList();
   }, [setData]);
 
+  while (data[20] == undefined) {
+    return (
+      <div>
+          <h1>Loading...</h1>
+      </div>
+    );
+  }
+
   return (
     <div className="vacuna">
       <ReactBootstrap.Table striped bordered hover>
@@ -38,21 +46,3 @@ const Vacunes = () => {
 }
 
 export default Vacunes;
-
-
-// function Vacunes() {
-//   const [data,setData]=useState([]);
-
-// const getData=()=>{
-//   fetch('https://covid-vacuna.app/data/latest.json')
-//     .then(function(response){
-//       return response.json();
-//     })
-//     .then(function(myJson) {
-//       console.log(myJson);
-//       setData(myJson)
-//     });
-//   }
-//   useEffect(()=>{
-//     getData()
-//   },[])
