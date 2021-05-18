@@ -54,10 +54,15 @@ var ccaaSchema = new mongoose.Schema({
         required: false,
     },
     fechaUltRegistro: {
-        type: Date,
+        type: Number,
+        required: false,
+    },
+    etarios: {
+        type: Object,
         required: false,
     }
 });
 
-var ccaa = mongoose.model('ccaa', ccaaSchema, 'dades');
-module.exports = ccaa;
+var Ccaa = mongoose.model('Ccaa', ccaaSchema, 'vacunas');
+
+module.exports = Ccaa;
