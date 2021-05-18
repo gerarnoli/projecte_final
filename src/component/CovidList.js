@@ -39,7 +39,7 @@ const CovidList = () => {
                     {
                         posts.blogs && posts.blogs.map((item) => (
                             <tr key={item.id}>
-                                <th>{item.name}</th>
+                                <td>{item.name}</td>
                                 <td>{item.today_new_open_cases}</td>
                                 <td>{item.today_new_deaths}</td>
                             </tr>
