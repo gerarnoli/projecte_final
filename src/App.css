@@ -1,52 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0;
 }
 
+/* Taula covid */
 
-/* .App-header {
-  background-color: #1D3557;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.user-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+thead th {
+  text-align: left;
+  border-bottom: 2px solid black;
 }
 
-.info-item {
-  width: 15vw;
-  height: 5vh;
-  padding: 2em;
-  border: 2px solid rgb(159, 12, 22);
-  align-self: center;
-  background-color: #63b7af;
-  border-radius: 2em;
-} */
+thead button {
+  border: 0;
+  border-radius: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  padding: 0.5em;
+  margin-bottom: 1px;
+}
+
+thead button.ascending::after {
+  content: '👇';
+  display: inline-block;
+  margin-left: 1em;
+}
+
+thead button.descending::after {
+  content: '☝️';
+  display: inline-block;
+  margin-left: 1em;
+}
+
+tbody td {
+  padding: 0.5em;
+  border-bottom: 1px solid #ccc;
+}
+
+td {
+  width: 200px;
+}
+
+tbody tr:hover {
+  background-color: #eee;
+}
+
+.taula-covid {
+  margin-left: 100px;
+  margin-top: 100px;
+  margin-right: 100px;
+  border-style: solid;
+}
+
+/* Taula vacunes */
 
 .page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 .content-wrap {
   flex: 1;
 }
 
-.principal, .vacuna, .taula, .taula2 {
+.taula-vacuna {
   margin: 100px;
+}
+
+.vacuna {
+  width: 200px;
 }
 
 .header {

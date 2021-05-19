@@ -3,8 +3,8 @@ import CovidList from "../component/CovidList"; // Import de la API COVID
 
 const Home = () => {
     return (
-        <div className="principal">
-            <CovidList />
+        <div className="taula">
+            <CovidList/>
         </div>
     )
 }

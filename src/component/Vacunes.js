@@ -15,7 +15,7 @@ const Vacunes = () => {
     fetchPostList();
   }, [setData]);
 
-  while (data[20] == undefined) {
+  while (data[20] === undefined) {
     return (
       <div>
           <h1>Loading...</h1>
@@ -24,7 +24,7 @@ const Vacunes = () => {
   }
 
   return (
-    <div className="vacuna">
+    <div className="taula-vacuna">
       <ReactBootstrap.Table striped bordered hover>
           <thead>
             <tr>
@@ -35,7 +35,7 @@ const Vacunes = () => {
           </thead>
           <tbody>
             <tr>
-              <th>{data[20].ccaa}</th>
+              <th className="vacuna">Total Espanya</th>
               <td>{(data[20].porcentajePoblacionPrimeraDosis*100).toFixed(2)} %</td>
               <td>{(data[20].porcentajePoblacionCompletas*100).toFixed(2)} %</td>
             </tr>

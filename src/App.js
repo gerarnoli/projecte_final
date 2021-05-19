@@ -1,7 +1,6 @@
 import React from "react";
 import './App.css';
 import Vacunes from "./component/Vacunes";
-import CovidList2 from "./component/CovidList-sort";
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from "./component/Navbar/Header";
@@ -18,13 +17,12 @@ function App() {
         <Router>
             <Navbar />
             <switch>
+              <Route path='/' exact component={Home} />
               <Route path='/about' component={About} />
               <Route path='/Servicios' component={Servicios} />
               <Route path='/contacto' component={Contacto} />
-              <Route path='/' exact component={Home} />
             </switch>
             <Vacunes/>
-            <CovidList2/>
         </Router>
       </div>
     <Footer />
