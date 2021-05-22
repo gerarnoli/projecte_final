@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css';
 import Vacunes from "./component/Vacunes";
+import Taula from "./component/Taula";
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from "./component/Navbar/Header";
@@ -23,6 +24,7 @@ function App() {
               <Route path='/contacto' component={Contacto} />
             </switch>
             <Vacunes/>
+            <Taula/>
         </Router>
       </div>
     <Footer />
