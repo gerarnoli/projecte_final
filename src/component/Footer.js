@@ -7,7 +7,7 @@ function Footer() {
         <div className="main-Footer">
             <div className="container">
                 <div className="row">
-                    {/* Column1 */}
+                    
                     <div className="col">
                     <Logo />
                         
@@ -15,22 +15,15 @@ function Footer() {
 
                     {/* Column2 */}
                     <div className="col">
-                        <h3>DADES COVID</h3>
-                        
+                            &copy;{new Date().getFullYear()} DADES COVID ORG | Terminos de Servicio 
                     </div>
 
                     {/* Column3 */}
                     <div className="col">
-                        <h3>GRUP 3</h3>
-                        <h7>PEDRO NIETO <br/> GERARD ARNAN <br/>BAYRON LÓPEZ</h7>                        
+                        <h5>GRUP 3
+                        PEDRO NIETO GERARD ARNAN BAYRON LÓPEZ  </h5>                      
                     </div>
-                </div>
-                <hr/>
-                <div className="row2">
-                    {/* Column2 */}
-                        <div className="col-sm">
-                            &copy;{new Date().getFullYear()} DADES COVID ORG | Terminos de Servicio 
-                        </div>
+                    
                 </div>
             </div>
         </div>

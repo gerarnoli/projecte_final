@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   background: #1D3557;
   height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
   /* Third Nav */
