@@ -6,6 +6,13 @@
   box-sizing: border-box;
 }
 
+/* Home */
+
+.virus {
+  margin-left: 33%;
+  margin-top: 70px;
+}
+
 /* Taula covid */
 
 table {

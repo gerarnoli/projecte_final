@@ -4,7 +4,7 @@ import './App.css';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from "./component/Navbar/Header";
-import Home from './paginas';
+import Home from './paginas/home.js';
 import Footer from "./component/Footer";
 import Covid from './paginas/about';
 import Vacunes from './paginas/servicios';

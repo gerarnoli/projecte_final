@@ -17,10 +17,10 @@ const Navbar = () => {
             <Bars />
             <NavMenu>
                 <NavLink to="/about" activeStyle>
-                    About
+                    Covid
                 </NavLink>
                 <NavLink to="/servicios" activeStyle>
-                    Servicios
+                    Vacunes
                 </NavLink>
                 <NavLink to="/contacto" activeStyle>
                     Contacto
