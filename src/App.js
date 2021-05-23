@@ -1,13 +1,13 @@
 import React from "react";
 import './App.css';
-import Vacunes from "./component/Vacunes";
+//import Taula from "./component/Taula";
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from "./component/Navbar/Header";
-import Home from './paginas';
+import Home from './paginas/home.js';
 import Footer from "./component/Footer";
-import About from './paginas/about';
-import Servicios from './paginas/servicios';
+import Covid from './paginas/about';
+import Vacunes from './paginas/servicios';
 import Contacto from './paginas/contacto';
 
 function App() {
@@ -18,14 +18,14 @@ function App() {
             <Navbar />
             <switch>
               <Route path='/' exact component={Home} />
-              <Route path='/about' component={About} />
-              <Route path='/Servicios' component={Servicios} />
+              <Route path='/about' component={Covid} />
+              <Route path='/Servicios' component={Vacunes} />
               <Route path='/contacto' component={Contacto} />
             </switch>
-            <Vacunes/>
+            
         </Router>
       </div>
-    <Footer />
+    <Footer/>
     </div>
   );
 }

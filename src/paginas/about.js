@@ -1,17 +1,13 @@
-import React from 'react'
+import React from 'react';
+import CovidList from "../component/CovidList";
+import '../App.css';
 
-const About = () => {
+const Covid = () => {
     return (
-        <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '90vh'
-        }}
-        >
-            <h1>About</h1>
+        <div>
+            <CovidList/>
         </div>
     )
 }
 
-export default About
+export default Covid

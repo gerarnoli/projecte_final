@@ -20,8 +20,8 @@ function Footer() {
 
                     {/* Column3 */}
                     <div className="col">
-                        <h5>GRUP 3
-                        PEDRO NIETO GERARD ARNAN BAYRON LÓPEZ  </h5>                      
+                        {/* <h5>GRUP 3 </h5> */}
+                        <h7>Pedro Nieto, Gerard Arnan i Bayron López</h7> 
                     </div>
                     
                 </div>
