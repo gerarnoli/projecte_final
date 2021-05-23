@@ -5,7 +5,7 @@ import virus from '../media/virus.gif';
 const Home = () => {
     return (
         <div>
-            <img src={virus} class="virus"></img>
+            <img src={virus} class="virus" alt="virus"></img>
         </div>
     )
 }

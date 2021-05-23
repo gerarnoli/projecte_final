@@ -15,13 +15,14 @@ function Footer() {
 
                     {/* Column2 */}
                     <div className="col">
-                            &copy;{new Date().getFullYear()} DADES COVID ORG | Terminos de Servicio 
+                        {/* <h5>GRUP 3 </h5> */}
+                        <h6>Pedro Nieto, Gerard Arnan i Bayron López</h6> 
                     </div>
+                    
 
                     {/* Column3 */}
                     <div className="col">
-                        {/* <h5>GRUP 3 </h5> */}
-                        <h7>Pedro Nieto, Gerard Arnan i Bayron López</h7> 
+                          <h6> &copy;{new Date().getFullYear()} DADES COVID ORG <br></br> INS PEDRALBES 2021  </h6> 
                     </div>
                     
                 </div>
