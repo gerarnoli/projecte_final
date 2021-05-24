@@ -14,6 +14,10 @@ const Navbar = () => {
             <NavLink to="/">
                 <Logoheader />
             </NavLink>
+            <NavLink to="/">
+                DADES COVID
+            </NavLink>
+            
             <Bars />
             <NavMenu>
                 <NavLink to="/Covid" activeStyle>
