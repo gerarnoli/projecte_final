@@ -51,31 +51,19 @@ const CovidTable = () => {
     const fetchPostList = async () => {
       let today = new Date();
       today = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
-      console.log(today);
       const {data} = await axios(`https://api.covid19tracking.narrativa.com/api/${today}/country/spain`)
       setPosts(data.dates[today].countries.Spain.regions);
       let total_1 = 0;
       let total_2 = 0;
-      items.map((item) => (
+      data.dates[today].countries.Spain.regions.map((item) => (
         total_1 += item.today_new_open_cases,
         total_2 += item.today_new_deaths
-        ))
+      ))
       setTotal_1(total_1);
       setTotal_2(total_2);
-      console.log(data);
-      console.log(total_1);
-      console.log(total_2);
     }
     fetchPostList()
   }, [setPosts])
-
-  while (total_1 === undefined && total_2 === undefined) {
-    return (
-      <div>
-          <h1>Loading...</h1>
-      </div>
-    );
-  }
 
   return (
     <div className="taula-covid">
