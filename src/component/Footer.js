@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Footer.css";
-import Logo from './Logo';
+import LogoFooter from './logos/logoFooter';
 
 function Footer() {
     return (
@@ -9,7 +9,7 @@ function Footer() {
                 <div className="row">
                     
                     <div className="col">
-                    <Logo />
+                    <LogoFooter />
                         
                     </div>
 
@@ -22,7 +22,7 @@ function Footer() {
 
                     {/* Column3 */}
                     <div className="col">
-                          <h6> &copy;{new Date().getFullYear()} DADES COVID ORG <br></br> INS PEDRALBES 2021  </h6> 
+                          <h6> &copy;{new Date().getFullYear()} DADES COVID <br></br> INS PEDRALBES 2021  </h6> 
                     </div>
                     
                 </div>

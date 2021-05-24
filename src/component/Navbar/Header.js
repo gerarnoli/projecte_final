@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../Logo'
+import Logoheader from '../logos/Logoheader';
 import {
     Nav,
     NavLink,
@@ -12,7 +12,7 @@ const Navbar = () => {
         <>
         <Nav>
             <NavLink to="/">
-                <Logo />
+                <Logoheader />
             </NavLink>
             <Bars />
             <NavMenu>
