@@ -1,36 +1,29 @@
 import React from 'react';
 import "./Footer.css";
-import Logo from './Logo';
+import LogoFooter from './logos/logoFooter';
 
 function Footer() {
     return (
         <div className="main-Footer">
             <div className="container">
                 <div className="row">
-                    {/* Column1 */}
+                    
                     <div className="col">
-                    <Logo />
+                    <LogoFooter />
                         
                     </div>
 
                     {/* Column2 */}
                     <div className="col">
-                        <h3>DADES COVID</h3>
-                        
+                        Pedro Nieto, Gerard Arnan i Bayron López 
                     </div>
+                    
 
                     {/* Column3 */}
                     <div className="col">
-                        {/*<h3>GRUP 3</h3>*/}
-                        <h7>Pedro Nieto, Gerard Arnan i Bayron López</h7>                        
+                           &copy;{new Date().getFullYear()} DADES COVID <br></br> INS PEDRALBES 2021
                     </div>
-                </div>
-                <hr/>
-                <div className="row2">
-                    {/* Column2 */}
-                        <div className="col-sm">
-                            &copy;{new Date().getFullYear()} DADES COVID ORG | Terminos de Servicio 
-                        </div>
+                    
                 </div>
             </div>
         </div>

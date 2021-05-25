@@ -4,11 +4,11 @@ import './App.css';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from "./component/Navbar/Header";
-import Home from './paginas/home.js';
+import index from './paginas/index.js';
 import Footer from "./component/Footer";
-import Covid from './paginas/about';
-import Vacunes from './paginas/servicios';
-import Contacto from './paginas/contacto';
+import Covid from './paginas/Covid';
+import Vacunes from './paginas/headVacunes';
+import Dades from './paginas/Dades';
 
 function App() {
   return (
@@ -17,10 +17,10 @@ function App() {
         <Router>
             <Navbar />
             <switch>
-              <Route path='/' exact component={Home} />
-              <Route path='/about' component={Covid} />
-              <Route path='/Servicios' component={Vacunes} />
-              <Route path='/contacto' component={Contacto} />
+              <Route path='/' exact component={index} />
+              <Route path='/Covid' component={Covid} />
+              <Route path='/Vacunes' component={Vacunes} />
+              <Route path='/Dades' component={Dades} />
             </switch>
             
         </Router>

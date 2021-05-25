@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../Logo'
+import Logoheader from '../logos/Logoheader';
 import {
     Nav,
     NavLink,
@@ -12,18 +12,22 @@ const Navbar = () => {
         <>
         <Nav>
             <NavLink to="/">
-                <Logo />
+                <Logoheader />
             </NavLink>
+            <NavLink to="/">
+                DADES COVID
+            </NavLink>
+            
             <Bars />
             <NavMenu>
-                <NavLink to="/about" activeStyle>
+                <NavLink to="/Covid" activeStyle>
                     Covid
                 </NavLink>
-                <NavLink to="/servicios" activeStyle>
+                <NavLink to="/Vacunes" activeStyle>
                     Vacunes
                 </NavLink>
-                <NavLink to="/contacto" activeStyle>
-                    Contacto
+                <NavLink to="/Dades" activeStyle>
+                    Dades
                 </NavLink>
             </NavMenu>
         </Nav>  
