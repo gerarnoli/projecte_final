@@ -1,6 +1,5 @@
 import React from "react";
 import './App.css';
-//import Taula from "./component/Taula";
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from "./component/Navbar/Header";
