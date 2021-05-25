@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+﻿# Projecte MERN Stack
+![enter image description here](https://static.platzi.com/media/blog/mern-stack-284eedb6-ee6b-4441-b181-5064a453a15a.png)
+Projecte final del CFGS Desenvolupament d'Aplicacions Web on posem en pràctica tots els coneixements que hem anat aprenent durant el curs. En el nostre cas hem utilitzat l'stack d'aplicacions MERN que es: MongoDB,
+Express JS, React i Node JS.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Especificament el nostre projecte l'executarem a Amazon Web Services
+![enter image description here](https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_stacked_REV_SQ.91cd4af40773cbfbd15577a3c2b8a346fe3e8fa2.png)
+## Instalació
+Primer de tot necessitem tindre la nostra Instancia de AWS, nosaltres hem agafat un Ubuntu Server 20.04 LTS.
+En el terminal fem: 
+Primer de tot actualitzem:
 
-## Available Scripts
+    sudo apt-get update
+  
+Instalem apache, git, npm i mongodb:
 
-In the project directory, you can run:
+    sudo apt install apache2
+    sudo apt install git
+    sudo apt install npm
+    sudo apt install mongodb
+Fem git clone del nostre projecte
 
-### `npm start`
+    sudo git clone https://github.com/gerarnoli/projecte_final.git
+Anem a la carpeta projecte final i fem un npm build
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    cd projecte_final
+    npm build
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Amb la carpeta que hem creat que es diu build fem un move cap a la carpeta Apache
+	
 
-### `npm test`
+    mv build /var/www/html
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Ja tenim la web estatica funcionant, ara faltaria fer funcionar la part de backend de base de dades i el crud. Per la part de MongoDB farem dues comandes, wget i mongodb import
+	
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    wget https://covid-vacuna.app/data/latest.json
+    mongoimport --jsonArray --db vacuna --collection docs --file latest.json
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ja tenim la part de la base de dades, faltaria el CRUD i ja estaria que seria anar dintre de la carpeta projecte_final/src/backend:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    node index.js
 
-### `npm run eject`
+Ja podriem anar a la noster IP de AWS i la nostre web app estaria en funcionament!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
