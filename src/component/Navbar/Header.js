@@ -14,9 +14,9 @@ const Navbar = () => {
             <NavLink to="/">
                 <Logoheader />
             </NavLink>
-            <NavLink to="/">
-                DADES COVID
-            </NavLink>
+            <NavMenu to="/">
+                COVID APP
+            </NavMenu>
             
             <Bars />
             <NavMenu>
