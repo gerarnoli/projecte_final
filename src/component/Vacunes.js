@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import * as ReactBootstrap from 'react-bootstrap';
 import '../App.css';
 import axios from 'axios';
+import ProgressBar from "../component/progressbar";
 
 const Vacunes = () => {
   const [posts, setPosts] = useState([]);
@@ -44,7 +45,8 @@ const Vacunes = () => {
               <td>{(posts[20].porcentajePoblacionCompletas*100).toFixed(2)} %</td>
             </tr>
           </tbody>
-      </ReactBootstrap.Table>
+      </ReactBootstrap.Table><br/>
+      <ProgressBar/>
     </div>
   );
 }
