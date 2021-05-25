@@ -50,11 +50,12 @@ const CovidTable = () => {
   useEffect(() => {
     const fetchPostList = async () => {
       let today = new Date();
+      let total_1 = 0;
+      let total_2 = 0;
       today = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
       const {data} = await axios(`https://api.covid19tracking.narrativa.com/api/${today}/country/spain`)
       setPosts(data.dates[today].countries.Spain.regions);
-      let total_1 = 0;
-      let total_2 = 0;
+      console.log(data.dates[today].countries.Spain.regions);
       data.dates[today].countries.Spain.regions.map((item) => (
         total_1 += item.today_new_open_cases,
         total_2 += item.today_new_deaths
@@ -70,9 +71,9 @@ const CovidTable = () => {
       <table className="taula">
         <thead>
           <tr>
-            <th><button type="button" onClick={()=>requestSort('name')} className={getClassNamesFor('name')}>Comunitats autònomes</button></th>
-            <th><button type="button" onClick={() => requestSort('price')} className={getClassNamesFor('price')}>Nous casos avui </button></th>
-            <th><button type="button" onClick={() => requestSort('stock')} className={getClassNamesFor('stock')}>Noves defuncions avui</button></th>
+            <th><button type="button" onClick={() => requestSort('name')} className={getClassNamesFor('name')}>Comunitats autònomes</button></th>
+            <th><button type="button" onClick={() => requestSort('today_new_open_cases')} className={getClassNamesFor('today_new_open_cases')}>Nous casos avui</button></th>
+            <th><button type="button" onClick={() => requestSort('today_new_deaths')} className={getClassNamesFor('today_new_deaths')}>Noves morts avui</button></th>
           </tr>
         </thead>
         <tbody>
