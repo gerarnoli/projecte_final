@@ -3,6 +3,10 @@ var express = require('express'),
     port = 3000,
     bodyParser = require('body-parser');
 
+    var cors = require('cors');
+
+    app.use(cors());
+    
 var ccaaRoutes = require("./routes/ccaas");
 
 app.use(bodyParser.json());
