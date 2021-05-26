@@ -2,43 +2,22 @@ import React,{useState,useEffect} from 'react';
 import * as ReactBootstrap from 'react-bootstrap';
 import '../App.css';
 import axios from 'axios';
+import ProgressBar from "../component/progressbar";
 
 const Vacunes = () => {
   const [posts, setPosts] = useState([]);
-
-  useEffect(() => {/*
-    const fetchPostList = async () => {
-      console.log("antes");
-      const data = await fetch(`http://localhost:3000/api/datos`);
-      console.log("despues");
-      console.log(data);
-      // const {data} = await axios.get(`http://localhost:3000/api/datos`);
-      // const data = await fetch('https://covid-vacuna.app/data/latest.json');
-      // const json = await data.json();
-      setPosts(data);
-      console.log(posts);
-    }
-    fetchPostList();*/
-
-
-    
-
-      // Make a request for a user with a given ID
+  
+  useEffect(() => {
       axios.get('http://localhost:3000/api/datos')
         .then(function (response) {
-          // handle success
           console.log(response);
           setPosts(response.data);
         })
         .catch(function (error) {
-          // handle error
           console.log(error);
         })
         .then(function () {
-          // always executed
         });
-
-
   }, [setPosts]);
 
   while (posts[20] === undefined) {
@@ -66,7 +45,8 @@ const Vacunes = () => {
               <td>{(posts[20].porcentajePoblacionCompletas*100).toFixed(2)} %</td>
             </tr>
           </tbody>
-      </ReactBootstrap.Table>
+      </ReactBootstrap.Table><br/>
+      <ProgressBar/>
     </div>
   );
 }
