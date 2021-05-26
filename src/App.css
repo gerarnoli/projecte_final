@@ -16,12 +16,18 @@
 
 /* Dades */
 
-.dades h1 {
-  display: block;
+.dades {
+  margin-left: 35%;
+  margin-top: 5%;
+}
+
+.dades img {
+  width: 102px;
+  margin: 10px;
 }
 
 .dades img:hover {
-  width: 102px;
+  width: 200px;
 }
 
 /* Taula covid */
