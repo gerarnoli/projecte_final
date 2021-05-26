@@ -14,6 +14,16 @@
   margin-top: 70px;
 }
 
+/* Dades */
+
+.dades h1 {
+  display: block;
+}
+
+.dades img:hover {
+  width: 102px;
+}
+
 /* Taula covid */
 
 table {
