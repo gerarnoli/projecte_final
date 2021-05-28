@@ -17,8 +17,9 @@
 /* Dades */
 
 .dades {
-  margin-left: 35%;
-  margin-top: 5%;
+  text-align: center;
+  padding: 200px;
+  font-size: 2rem;
 }
 
 .dades img {
@@ -29,6 +30,8 @@
 .dades img:hover {
   width: 200px;
 }
+
+li { list-style: none;}
 
 /* Taula covid */
 
