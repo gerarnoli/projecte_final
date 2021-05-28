@@ -1,16 +1,16 @@
 import React from 'react';
 import "./Footer.css";
-import LogoFooter from './logos/logoFooter';
+import mernLogo from '../media/MernLogo.png';
 
 function Footer() {
     return (
         <div className="main-Footer">
             <div className="container">
-                <div className="row">
+                <div className="row">  
                     
+                    {/* Column1 */}
                     <div className="col">
-                    <LogoFooter />
-                        
+                    <img src={mernLogo} alt='mernlogo' width='180' />
                     </div>
 
                     {/* Column2 */}

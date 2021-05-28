@@ -9,4 +9,4 @@ const headVacunes = () => {
     )
 }
 
-export default headVacunes
+export default headVacunes;

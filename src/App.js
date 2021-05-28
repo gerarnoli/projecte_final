@@ -1,12 +1,12 @@
 import React from "react";
 import './App.css';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Navbar from "./component/Navbar/Header";
-import index from './paginas/index.js';
+import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
+import Header from "./component/Header";
+import Inicio from './paginas/inicio.js';
 import Footer from "./component/Footer";
 import Covid from './paginas/Covid';
-import Vacunes from './paginas/headVacunes';
+import Vacunas from './paginas/headVacunes';
 import Dades from './paginas/Dades';
 
 function App() {
@@ -14,17 +14,17 @@ function App() {
     <div className="page-container">
       <div className="content-wrap">
         <Router>
-            <Navbar />
-            <switch>
-              <Route path='/' exact component={index} />
-              <Route path='/Covid' component={Covid} />
-              <Route path='/Vacunes' component={Vacunes} />
-              <Route path='/Dades' component={Dades} />
-            </switch>
-            
-        </Router>
-      </div>
-    <Footer/>
+          <Header />
+        <Switch>
+          <Route path='/' exact component={Inicio} />
+          <Route path='/Covid' exact component={Covid} />
+          <Route path='/Vacunas' exact component={Vacunas} />
+          <Route path='/Dades' exact component={Dades} />
+        </Switch>
+        
+      </Router>
+    </div>
+    <Footer />
     </div>
   );
 }

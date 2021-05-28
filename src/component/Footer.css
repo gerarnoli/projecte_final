@@ -7,6 +7,15 @@
     width: 100%;
 }
 
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+
 .col{
     padding-top: 10px;
     display: grid;
