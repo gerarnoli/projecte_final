@@ -44,6 +44,8 @@ Ja tenim la part de la base de dades, faltaria el CRUD i ja estaria que seria an
 
 Ja podriem anar a la noster IP de AWS i la nostre web app estaria en funcionament!
 
+IP PRODUCCIÓ : http://52.73.80.130/
+
    
 
 
