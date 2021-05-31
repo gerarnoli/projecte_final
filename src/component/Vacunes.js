@@ -3,12 +3,19 @@ import * as ReactBootstrap from 'react-bootstrap';
 import '../App.css';
 import axios from 'axios';
 import ProgressBar from "../component/progressbar";
+import { app } from 'firebase-functions';
+
+const cors = require('cors');
+
+app.use(cors(
+  config.application.cors.server
+));
 
 const Vacunes = () => {
   const [posts, setPosts] = useState([]);
   
   useEffect(() => {
-      axios.get('http://localhost:3000/api/datos')
+      axios.get('http://52.73.80.130/api/datos')
         .then(function (response) {
           console.log(response);
           setPosts(response.data);
